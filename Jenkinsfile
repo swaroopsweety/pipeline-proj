@@ -14,7 +14,7 @@ pipeline {
         }
         stage('continuous deploy') {
             steps {
-                sh 'sshpass -p "jeevan" scp webapp/target/webapp.war jeevan@172.17.0.4:/opt/apache-tomcat-9.0.56/webapps'
+                sh 'scp webapp/target/webapp.war jeevan@172.17.0.4:/opt/apache-tomcat-9.0.56/webapps'
             }
         }
     }
